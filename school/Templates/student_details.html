@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <title>Students Details</title>
+    <style>
+        *{
+        padding:0;
+        margin:0;
+        box-sizing: border-box;
+        }
+        .container{
+         border: 1px solid grey;
+         height: 300px;
+         width: 700px;
+         margin-top: 80px;
+        }
+        .input-group{
+        padding: 8px;
+        }
+        .btn-group{
+        margin-left: 280px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<form method="POST" action="stud_details">
+    {% csrf_token %}
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" name="Student_name" placeholder="Student Name" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" maxlength="7" name="Student_roll_number" placeholder="Roll Number" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3">
+        <input type="date" class="form-control" name="dob" placeholder="Date of Birth" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+
+</form>
+<!--{{data}}-->
+    </div>
+</body>
+</html>

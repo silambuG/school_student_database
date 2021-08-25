@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Details</title>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+<table>
+  <tr>
+    <th>Student Name</th>
+    <th>Roll Number</th>
+    <th>Date of Birth</th>
+  </tr>
+  {% for data in data %}
+  <tr>
+    <td>{{data.student_name}}</td>
+    <td>{{data.roll_number}}</td>
+    <td>{{data.DOB}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+</body>
+</html>

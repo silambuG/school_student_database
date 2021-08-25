@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>school</title>
+    <style>
+        body{
+            background-color:white;
+            height: auto;
+            }
+        #login_link{
+        color:white;
+        }
+        a{
+        text-decoration: None;
+        }
+        .about_us{
+        height: 500px;
+        }
+        .blank{
+            height: 80px;
+            width: 100%;
+            background-color: #990000;
+        }
+        #school_name{
+        text-align: center;
+        }
+
+        figure{
+        height:auto;
+        }
+        .menu{
+            width:100%;
+            height: 30%;
+            margin:auto;
+            padding: 0px 0;
+            display: flex;
+            justify-content: space-between;
+            background-color:grey;
+            margin-top:5px;
+
+            }
+            .menu ul li{
+            list-style: none;
+            display:inline-block;
+            margin: 0 40px;
+            border: 1px solid transparent;
+            background-color: transparent;
+            padding:10px 0px;
+
+
+            }
+            .menu ul li a{
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            text-shadow: 0 -6px 5px black;
+            }
+            .menu ul li form input{
+            height: 30px;
+            border-radius: 5px;
+
+            }
+            .menu ul li form button{
+            height: 30px;
+            border-radius: 5px;
+            background-color: #990000;
+            color: white;
+            overlay: hidden;
+
+            }
+            .menu ul li a:hover{
+            color:#990000;
+            }
+
+
+    </style>
+</head>
+<body>
+
+<div class="blank" style="text-shadow: 0 -10px 5px black;"><p id="school_name"> <a style="text-decoration: None;" href=""> <span style="font-style: italic; font-weight: bold; color: white; font-size: 65px;"> St. MARY'S  HR. SEC. SCHOOL</span><span style="color: white; font-style: italic; font-size: 20px"><strong>, SALEM </strong></span> </a></p></div>
+
+<nav class="menu">
+      <ul >
+          <li><a href="/"><span><strong style="font-style: italic; ">St.MARY'S</strong></span></a></li>
+        <li>
+          <a href="stud_details" style="font-style: italic;"><strong>Add Student_Details</strong></a>
+        </li>
+        <li>
+          <a href="stud_data_show" style="font-style: italic;"><strong>Student_Details</strong></a>
+        </li>
+        <li>
+          <a href="mark_entry" style="font-style: italic;"><strong>Student Marks Entry</strong></a>
+        </li>
+        <li>
+          <a href="student_result_login" style="font-style: italic;"><strong>RESULTS</strong></a>
+        </li>
+        <li>
+          <a href="#" style="font-style: italic;"><strong>ABOUT US</strong></a>
+        </li>
+      </ul>
+</nav>
+</body>
+</html>

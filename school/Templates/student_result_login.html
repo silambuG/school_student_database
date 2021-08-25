@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>student Login</title>
+    <style>
+      #student_login_box{
+            height: 50%;
+            width: 50%;
+            margin-left: 400px;
+            border: 5px solid blue;
+            box-shadow: 0 0 10px blue;
+            border-radius: 30px;
+            padding: 1%;
+            margin-top: 40px;
+      }
+       .a{
+            margin-left: 340px
+            }
+    </style>
+</head>
+<body>
+
+<div id="student_login_box">
+
+       <legend>Students Login</legend>
+
+       <form action="student_result" method="POST">
+
+           {% csrf_token %}
+
+       <input type="text" name="stud_roll_no" class="form-control" placeholder="stud_roll_no" required><br>
+       <input type="submit" class="btn btn-primary a" value="submit" name="submit">
+
+      </form>
+</div>
+</body>
+</html>
