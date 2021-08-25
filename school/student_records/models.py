@@ -3,7 +3,7 @@ from django.db import models
 
 class StudentDetails(models.Model):
     student_name = models.CharField(max_length=50)
-    roll_number = models.IntegerField()
+    roll_number = models.IntegerField(unique=True)
     DOB = models.DateField()
 
 

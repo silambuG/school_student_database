@@ -20,7 +20,8 @@ def student_details(request):
 
 def stud_data_show(request):
     stud_data = StudentDetails.objects.all()
-    return render(request, 'student_data_show.html', {'data': stud_data})
+    stud_count = StudentDetails.objects.all().count()
+    return render(request, 'student_data_show.html', {'data': stud_data, 'no_of_students': stud_count})
 
 
 def student_marks(request):
@@ -43,6 +44,7 @@ def student_result(request):
     if request.method == "POST":
         roll_no = request.POST['stud_roll_no']
         result = StudentMarkDetails.objects.filter(stud_roll_no=roll_no)
+        stud_filter_mark = StudentMarkDetails.objects.filter(Science=)
     return render(request, 'stud_result.html', {'result': result})
 
 
