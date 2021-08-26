@@ -44,7 +44,8 @@ def student_result(request):
     if request.method == "POST":
         roll_no = request.POST['stud_roll_no']
         result = StudentMarkDetails.objects.filter(stud_roll_no=roll_no)
-        stud_filter_mark = StudentMarkDetails.objects.filter(Science=)
+        stud_filter_mark = StudentMarkDetails.objects.filter(Science='23').count()
+        print(stud_filter_mark)
     return render(request, 'stud_result.html', {'result': result})
 
 
