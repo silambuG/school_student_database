@@ -7,10 +7,8 @@ def index(request):
 
 
 def student_details(request):
-    print('sdrtfgyuhijk')
     if request.method == 'POST':
         stud_name = request.POST['Student_name']
-        print(stud_name)
         roll_no = request.POST['Student_roll_number']
         date_of_birth = request.POST['dob']
         data = StudentDetails(student_name=stud_name, roll_number=roll_no, DOB=date_of_birth)
@@ -51,4 +49,38 @@ def student_result(request):
 
 def student_result_login(request):
     return render(request, 'student_result_login.html', {})
+
+
+def payment_index(request):
+    return render(request, 'online_payment_index.html', {})
+
+
+def pay_login(request):
+    if request.method == "POST":
+        name = request.POST['username']
+        user_password = request.POST['password']
+        OnlinePayment.objects.filter(username=name, password=user_password)
+        return render(request, 'payment.html')
+    return render(request, 'login.html')
+
+
+def signup(request):
+    if request.method == "POST":
+        name = request.POST['name']
+        password = request.POST['password']
+        mail = request.POST['email']
+        phone = request.POST['phone_number']
+        a = OnlinePayment(username=name, password=password, email=mail, phone=phone)
+        a.save()
+    return render(request, 'signup.html')
+
+
+def payment(request):
+    if request.method == "POST":
+        amount = request.POST['amount']
+        password = request.POST['password']
+        OnlinePayment.objects.filter(password=password)
+        data = AmountBalance(bal_amount=amount)
+        data.save()
+    return render(request, 'payment.html')
 

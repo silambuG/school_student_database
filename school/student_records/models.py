@@ -24,3 +24,25 @@ class StudentMarkDetails(models.Model):
 
 def __str__(self):
     return self.stud_name
+
+
+class OnlinePayment(models.Model):
+    username = models.CharField(max_length=60, unique=True)
+    password = models.IntegerField()
+    email = models.EmailField()
+    phone = models.CharField(max_length=10, null=True)
+    date = models.DateTimeField(auto_now_add=True, null=True)
+
+
+def __str__(self):
+    return self.username
+
+
+class AmountBalance(models.Model):
+    bal_amount = models.CharField(max_length=100)
+    date = models.DateTimeField(auto_now_add=True, null=True)
+
+
+def __str__(self):
+    return self.amount
+
